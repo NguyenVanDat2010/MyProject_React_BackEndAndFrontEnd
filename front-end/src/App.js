@@ -3,13 +3,14 @@ import { Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import AddTutorial from "./components/add-tutorial.component";
+import ListTutorials from "./components/list-tutorial.component";
 
 class App extends Component {
   render() {
     return(
       <div>
         <nav className="navbar navbar-expand navbar-dark bg-dark">
-          <a href="/tutorials" className="navbar-brand">
+          <a href="/" className="navbar-brand">
             Kira
           </a>
           <div className="navbar-nav mr-auto">
@@ -27,8 +28,8 @@ class App extends Component {
         </nav>
         <div className="container mt-3">
           <Switch>
-            {/* <Route axact path={["/","/tutorials"]} component={ListTutorials}></Route> */}
             <Route exact path="/add" component={AddTutorial}></Route>
+            <Route axact path={["/","/tutorials"]} component={ListTutorials}></Route>
           </Switch>
         </div>
       </div>

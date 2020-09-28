@@ -63,6 +63,7 @@ export default class AddTutorial extends Component{
     render(){
         return(
             <div className="submit-form">
+                {/* Mệnh đề điều kiện if-else rút gọn: condition ? true : false */}
                 {this.state.submmitted ? (
                     <div>
                         <h4>You submitted successfully!</h4>
