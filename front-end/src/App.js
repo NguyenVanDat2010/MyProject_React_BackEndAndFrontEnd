@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import AddTutorial from "./components/add-tutorial.component";
 import ListTutorials from "./components/list-tutorial.component";
+import Tutorial from "./components/tutorial.component";
 
 class App extends Component {
   render() {
@@ -28,6 +29,7 @@ class App extends Component {
         </nav>
         <div className="container mt-3">
           <Switch>
+            <Route path="/tutorials/:id" component={Tutorial} />
             <Route exact path="/add" component={AddTutorial}></Route>
             <Route axact path={["/","/tutorials"]} component={ListTutorials}></Route>
           </Switch>
